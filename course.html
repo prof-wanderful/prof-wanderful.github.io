@@ -1,27 +1,88 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
 <html lang="en">
 <head>
-  <title>Courses Taught</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Member - Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .course-name {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .course-code {
+            font-weight: bold;
+            color: #666;
+        }
+        .course-semester {
+            color: #666;
+        }
+        .course-description {
+            color: #444;
+        }
+        .instruction-manual {
+            color: #4CAF50;
+        }
+    </style>
 </head>
 <body>
-<!-- Links on the Sidebar -->
-  <div class="col-md-4" style="margin-top:2%">
-    <strong>Laboratory Instructions Manuals</strong><br/>
-    <dd><a href="courses/BSc-I_Lab.pdf">B. Sc. I and II Semester Physics Laboratory Manual</a></dd>
-    <dd><a href="courses/MSc_GenLab.pdf">M. Sc. (Physics) I and II Semester General Laboratory Manual</a></dd>
-  </div>
-</body>
+    <h1>Faculty Member</h1>
 
+    <h2>Theory Courses</h2>
+    <ul>
+        <li>
+            <span class="course-name">Electrodynamics and Relativity</span><br>
+            <span class="course-code">Course Code: ABC101</span><br>
+            <span class="course-semester">Semester: M. Sc. I Semester</span><br>
+            <span class="course-description">This course covers basics of transmission line, Tensor analysis, and Relativity</span>
+        </li>
+        <li>
+            <span class="course-name">Quantum Mechanics II</span><br>
+            <span class="course-code">Course Code: XYZ201</span><br>
+            <span class="course-semester">Semester: M. Sc. II Semester</span><br>
+            <span class="course-description">This course covers advanced quantum mechancics including Relattivistic Quantum Mechanics.</span>
+        </li>
+        <!-- Add more theory courses as needed -->
+    </ul>
+
+    <h2>Laboratory Courses</h2>
+    <ul>
+        <li>
+            <span class="course-name">B. Sc.</span><br>
+            <span class="course-code">Course Code:  </span><br>
+            <span class="course-semester">Semester: I and II (2019-2020), (2020-2021), (2021-2022), (2022-2023)</span><br>
+            <span class="course-description">These two laboratory courses covers the Mechanical properties of materials (I Semester) and Thermal & </span><br>
+            <a class="instruction-manual" href="courses/BSc-I_Lab.pdf" target="_blank">Download Instruction Manual</a>
+        </li>
+        <li>
+            <span class="course-name">M. Sc. General Laboratory</span><br>
+            <span class="course-code">Course Code: LAB201</span><br>
+            <span class="course-semester">Semester: Fall 2021</span><br>
+            <span class="course-description">This laboratory course covers...</span><br>
+            <a class="instruction-manual" href="courses/MSc_GenLab.pdf" target="_blank">Download Instruction Manual</a>
+        </li>
+        <!-- Add more laboratory courses as needed -->
+    </ul>
+</body>
 </html>
