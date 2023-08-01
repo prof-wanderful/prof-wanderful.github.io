@@ -115,6 +115,14 @@
 
 
     </div>
+    <script>
+        // Fetch and insert the navigation bar
+        fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+          });
+    </script>
     
 </body>
 
