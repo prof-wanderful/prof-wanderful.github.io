@@ -16,7 +16,12 @@
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
 </head>
 <style>
-  .blog-post {
+  .content {
+    padding: 20px;
+    text-align: center;
+}
+
+.blog-post {
     background-color: #fff;
     margin: 20px auto;
     padding: 20px;
@@ -25,11 +30,15 @@
 }
 
 .blog-photo {
-    max-width: 250px;
-    height: auto;
+    max-width: 100%;
     cursor: pointer;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.collapsible {
+    display: none;
+    text-align: justify; /* Justifies the text */
 }
 
 .modal {
@@ -79,8 +88,8 @@
       <div>
         <div class="content">
             <div class="blog-post">
-                <img src="blogs/1984.png" alt="Big Brother is watching you!" class="blog-photo" style="align-content: center;">
-                <div class="blog-text">
+                <img src="blogs/1984.png" alt="Big Brother is watching you!" class="blog-photo">
+                <div class="blog-text collapsible">
                     <!-- Your blog content goes here -->
                     <h2>Big Brother is Watching: Orwell's 1984 and the Perils of Surveillance</h2>
                     <div style="text-align: justify ;">
@@ -91,7 +100,7 @@
 
                         <p><strong>Eroson of Privacy</strong></p>
                         
-                        <p style="">One of the most striking aspects of Orwell's 1984 is the complete erosion of privacy. In Oceania, citizens are monitored constantly through 
+                        <p>One of the most striking aspects of Orwell's 1984 is the complete erosion of privacy. In Oceania, citizens are monitored constantly through 
                         telescreens, which capture both audio and visual data. This omnipresent surveillance creates a society where individuals cannot retreat into 
                         private spaces to express their thoughts freely. As Winston Smith, the protagonist, reflects on his predicament, <strong>"There was no way of knowing whether you were being watched at any given moment."</strong> 
                         This constant state of uncertainty forces individuals to conform outwardly to the Party's ideology, effectively erasing any semblance of personal freedom or autonomy.
