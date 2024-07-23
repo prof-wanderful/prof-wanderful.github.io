@@ -6,13 +6,14 @@ var img = document.querySelector(".blog-photo");
 var modalImg = document.getElementById("modal-img");
 
 img.onclick = function() {
-    var collapsibleText = document.querySelector(".collapsible");
-    if (collapsibleText.style.display === "none" || collapsibleText.style.display === "") {
-        collapsibleText.style.display = "block";
+    var blogText = document.querySelector(".blog-text");
+    if (blogText.style.display === "none" || blogText.style.display === "") {
+        blogText.style.display = "block";
         modal.style.display = "block";
         modalImg.src = this.src;
+        modalImg.style.display = "block";
     } else {
-        collapsibleText.style.display = "none";
+        blogText.style.display = "none";
         modal.style.display = "none";
     }
 }
@@ -22,7 +23,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-    var collapsibleText = document.querySelector(".collapsible");
-    collapsibleText.style.display = "none";
+    var blogText = document.querySelector(".blog-text");
+    blogText.style.display = "none";
     modal.style.display = "none";
 }
