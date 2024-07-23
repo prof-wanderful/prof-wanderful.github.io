@@ -17,101 +17,61 @@
 </head>
 <style>
     body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
     }
-    .content {
-    padding: 20px;
-    text-align: center;
-}
 
-.blog-post {
-    background-color: #fff;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
 
-.blog-photo {
-    max-width: 250px;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto; /* Centers the image horizontally */
-}
+    .image {
+        cursor: pointer;
+        max-width: 250px;
+        height: auto;
+    }
 
-.blog-text {
-    display: none;
-    text-align: justify; /* Justifies the text */
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-  h1{
-    color:azure;
-  }
-  .collapsible {
-    display: none; /* Hides the text by default */
-  }
+    .blog-text {
+        display: none;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: rgba(112, 128, 144, 0.75);
+        color: aliceblue;
+    }
+    .blog-text p {
+            font-size: 16px; /* Adjust the paragraph size here */
+            line-height: 1.5;
+    }
+    h1 {
+        color: azure;
+    }
 </style>
 <body>
     <div id="navbar-placeholder"></div>
     <iframe src="background.html" frameborder="0" scrolling="no" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     <div class="container" style="position: relative; top:0">
       <h1 style="text-align: center;">Reflections & Realities</h1>
-      <div>
-        <div class="content">
-            <div class="blog-post">
-                <img src="blogs/1984.png" alt="Big Brother is watching you!" class="blog-photo">
-                <div class="blog-text collapsible">
+      <div class="container">
+                <img src="blogs/1984.png" alt="Big Brother is watching you!" class="image" onclick="toggleText()">
+                <div id="blogText" class="blog-text">
                     <!-- Your blog content goes here -->
-                    <h2>Big Brother is Watching: Orwell's 1984 and the Perils of Surveillance</h2>
-                    <div style="text-align: justify ;">
+                    <h2 style="color: #ff3c00cc; font-weight: bold;">Big Brother is Watching: <br> Orwell's 1984 and the Perils of Surveillance</h2>
+                    <div style="text-align: justify;">
                         <p>In George Orwell's seminal novel 1984, the dystopian world of Oceania presents a chilling vision of a society under constant surveillance. 
                         The pervasive eyes of Big Brother, symbolized by ubiquitous telescreens, serve not only as tools for observation but as instruments of control 
                         and oppression. The novel provides a stark warning about the dangers of unchecked surveillance, illustrating how such practices erode privacy, 
                         stifle dissent, and ultimately pave the way for totalitarianism.</p>
 
-                        <p><strong>Eroson of Privacy</strong></p>
+                        <p style="color: rgb(255, 255, 127);"><strong>Eroson of Privacy</strong></p>
                         
                         <p>One of the most striking aspects of Orwell's 1984 is the complete erosion of privacy. In Oceania, citizens are monitored constantly through 
                         telescreens, which capture both audio and visual data. This omnipresent surveillance creates a society where individuals cannot retreat into 
-                        private spaces to express their thoughts freely. As Winston Smith, the protagonist, reflects on his predicament, <strong>"There was no way of knowing whether you were being watched at any given moment."</strong> 
+                        private spaces to express their thoughts freely. As Winston Smith, the protagonist, reflects on his predicament, <strong style="color: yellowgreen ">"There was no way of knowing whether you were being watched at any given moment."</strong> 
                         This constant state of uncertainty forces individuals to conform outwardly to the Party's ideology, effectively erasing any semblance of personal freedom or autonomy.
                         
                         This loss of privacy extends beyond physical spaces into the realm of thought. The concept of "thoughtcrime" in 1984 underscores the Party's 
@@ -120,7 +80,7 @@
                         in this sense, become tools of mental and emotional control, ensuring that individuals internalize the Party's doctrines out of fear of being 
                         caught.</p>
                         
-                        <p><strong>Stifling Dissent</strong></p>
+                        <p style="color: rgb(255, 255, 127);"><strong>Stifling Dissent</strong></p>
                         
                         <p>The surveillance in 1984 serves a dual purpose: it not only prevents rebellion but also stifles any form of dissent. The omnipresence of 
                         surveillance creates a culture of fear and suspicion, where individuals are hesitant to trust even their closest friends or family members. 
@@ -129,27 +89,30 @@
                         
                         The novel also depicts the use of propaganda in conjunction with surveillance to maintain control. The telescreens broadcast a constant stream of 
                         Party-approved information, shaping public perception and reinforcing the Party's version of reality. This manipulation of information, combined with
-                         the threat of surveillance, ensures that dissenting voices are silenced before they can gain traction. As Orwell poignantly states, <strong>"War is peace. 
-                         Freedom is slavery. Ignorance is strength."</strong> This doublespeak reinforces the Party's control over the populace's thoughts and beliefs, further stifling dissent.</p>
+                        the threat of surveillance, ensures that dissenting voices are silenced before they can gain traction. As Orwell poignantly states, <strong style="color: yellowgreen ">"War is peace. 
+                        Freedom is slavery. Ignorance is strength."</strong> This doublespeak reinforces the Party's control over the populace's thoughts and beliefs, further stifling dissent.</p>
+                        <p style="color: rgb(255, 255, 127);"><strong>The Path to Totalitarianism</strong></p>
                         
-                        <p><strong>The Path to Totalitarianism</strong></p>
-                        
-                        Orwell's 1984 illustrates how surveillance, when left unchecked, can lead to the rise of totalitarianism. The Party's control over every aspect of 
+                        <p>Orwell's 1984 illustrates how surveillance, when left unchecked, can lead to the rise of totalitarianism. The Party's control over every aspect of 
                         life in Oceania is maintained through a combination of fear, propaganda, and surveillance. By constantly monitoring citizens, the Party eliminates any possibility of rebellion or independent thought, creating a society where individuals are reduced to mere cogs in the state machinery.
                         
                         The novel's depiction of a totalitarian regime underscores the dangers of allowing surveillance to become pervasive and unchallenged. In the real 
                         world, the increasing use of surveillance technologies—such as CCTV cameras, internet monitoring, and facial recognition software—raises concerns 
                         about the potential for similar abuses of power. While these technologies are often justified in the name of security, Orwell's 1984 serves as a 
                         cautionary tale about the potential consequences of prioritizing control over freedom.</p>
-                        <p><strong>Conclusion</strong></p>
+                        <p style="color: rgb(255, 255, 127);"><strong>Conclusion</strong></p>
                         
-                        George Orwell's 1984 offers a powerful critique of surveillance and its impact on society. The novel's portrayal of a world where privacy is nonexistent, dissent is stifled, and totalitarianism reigns supreme serves as a stark warning about the dangers of unchecked surveillance. As modern societies grapple with the balance between security and freedom, 1984 reminds us of the importance of safeguarding our privacy and resisting the encroachment of authoritarianism. The lessons from Orwell's dystopian vision remain as relevant today as they were when the novel was first published, urging us to remain vigilant in protecting our fundamental rights and freedoms.
+                        <p>George Orwell's 1984 offers a powerful critique of surveillance and its impact on society. The novel's portrayal of a world where privacy is 
+                        nonexistent, dissent is stifled, and totalitarianism reigns supreme serves as a stark warning about the dangers of unchecked surveillance. As 
+                        modern societies grapple with the balance between security and freedom, 1984 reminds us of the importance of safeguarding our privacy and 
+                        resisting the encroachment of authoritarianism. The lessons from Orwell's dystopian vision remain as relevant today as they were when the novel 
+                        was first published, urging us to remain vigilant in protecting our fundamental rights and freedoms.
                         
-                        As we confront the challenges of our own surveillance technologies, we must remember the chilling maxim from 1984: <strong>"Big Brother is watching you."</strong> This reminder compels us to critically examine the balance between security and privacy and to resist the quiet creep of authoritarianism that surveillance can facilitate."</p>
+                        As we confront the challenges of our own surveillance technologies, we must remember the chilling maxim from 1984: <strong style="color: rgb(255, 0, 0); font-size: larger; ">"Big Brother is 
+                            watching you."</strong> This reminder compels us to critically examine the balance between security and privacy and to resist the quiet 
+                            creep of authoritarianism that surveillance can facilitate."</p>
                     </div>
                 </div>
-            </div>
-        </div>
     
       </div>
     </div>
@@ -161,7 +124,16 @@
             document.getElementById('navbar-placeholder').innerHTML = data;
           });
     </script>
-    <script src="blog_script.js"></script>
+    <script>
+        function toggleText() {
+            const blogText = document.getElementById('blogText');
+            if (blogText.style.display === 'none' || blogText.style.display === '') {
+                blogText.style.display = 'block';
+            } else {
+                blogText.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
