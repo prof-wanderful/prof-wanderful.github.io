@@ -1,29 +1,12 @@
-// Get the modal
-var modal = document.getElementById("modal");
+// Get the image and blog text elements
+var img = document.getElementById("photo");
+var blogText = document.querySelector(".blog-text");
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.querySelector(".blog-photo");
-var modalImg = document.getElementById("modal-img");
-
+// Toggle blog text visibility when the image is clicked
 img.onclick = function() {
-    var blogText = document.querySelector(".blog-text");
-    if (blogText.style.display === "none" || blogText.style.display === "") {
-        blogText.style.display = "block";
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        modalImg.style.display = "block";
+    if (blogText.classList.contains("collapsible")) {
+        blogText.classList.remove("collapsible");
     } else {
-        blogText.style.display = "none";
-        modal.style.display = "none";
+        blogText.classList.add("collapsible");
     }
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    var blogText = document.querySelector(".blog-text");
-    blogText.style.display = "none";
-    modal.style.display = "none";
 }
