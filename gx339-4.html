@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
+
+<html lang="en">
+<head>
+  <title>GX 339-4 | Exploring Dimensions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet" type="text/css">
+
+  <style>
+    body {
+      color: white;
+      background-color: black;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: azure;
+    }
+
+    h1 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    h2 {
+      margin-top: 35px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      padding-bottom: 6px;
+    }
+
+    a {
+      color: #9ddcff;
+    }
+
+    a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .content-box {
+      background: rgba(0, 0, 0, 0.62);
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 18px rgba(255, 255, 255, 0.12);
+    }
+
+    .project-subtitle {
+      color: #d8f4ff;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .info-label {
+      font-weight: bold;
+      color: #bfefff;
+    }
+
+    .highlight-box {
+      background: rgba(255, 255, 255, 0.08);
+      border-left: 4px solid #9ddcff;
+      padding: 15px 18px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .contact-box {
+      margin-top: 25px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+    }
+
+    ul {
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 14px;
+      color: #cccccc;
+      text-align: center;
+    }
+
+    iframe.background-frame {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%; 
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- Background -->
+  <iframe 
+    src="background.html" 
+    frameborder="0" 
+    scrolling="no" 
+    class="background-frame">
+  </iframe>
+
+  <div class="container" style="position: relative; top: 0;">
+    <div class="content-box">
+
+      <h1>GX 339-4: Broadband Spectral–Timing Study</h1>
+
+      <p class="project-subtitle">
+        Multi-mission X-ray analysis of the 2023–2024 outburst of the black hole X-ray binary GX 339-4
+      </p>
+
+      <div class="highlight-box">
+        <p>
+          This page accompanies my poster presentation on the broadband spectral–timing 
+          evolution and high-resolution X-ray spectroscopy of GX 339-4 during its 
+          2023–2024 outburst.
+        </p>
+      </div>
+
+      <h2>Project Overview</h2>
+
+      <p>
+        GX 339-4 is one of the most extensively studied black hole X-ray binaries and 
+        provides an excellent laboratory for investigating accretion physics, state 
+        transitions, disk–corona coupling, and reflection from the inner accretion flow.
+      </p>
+
+      <p>
+        In this work, we study selected epochs from the 2023–2024 outburst using 
+        coordinated observations from multiple X-ray missions. The selected observations 
+        trace the source from an intermediate state close to the HIMS/SIMS boundary, 
+        through a soft-intermediate state with a narrow low-frequency QPO, and finally 
+        into a disk-dominated soft state.
+      </p>
+
+      <h2>Observatories and Instruments</h2>
+
+      <ul>
+        <li><i>NICER</i></li>
+        <li><i>NuSTAR</i></li>
+        <li><i>AstroSat</i> / SXT and LAXPC</li>
+        <li><i>INTEGRAL</i> / ISGRI and SPI</li>
+        <li><i>XMM-Newton</i> / EPIC-pn and RGS</li>
+      </ul>
+
+      <h2>Analysis Highlights</h2>
+
+      <ul>
+        <li>
+          Broadband spectral fitting was performed using a common physical model 
+          including disk emission, thermal Comptonization, relativistic reflection, 
+          absorption, and partial covering.
+        </li>
+
+        <li>
+          Epochs 1 and 2 show broadly similar time-averaged spectral shapes, with 
+          only moderate changes in the Comptonized and reflected components.
+        </li>
+
+        <li>
+          Timing diagnostics provide the key distinction between these epochs, with 
+          a clear low-frequency QPO detected during Epoch 2.
+        </li>
+
+        <li>
+          In the later soft-state epoch, the Comptonized emission and reflection 
+          contribution are substantially reduced, consistent with a disk-dominated 
+          spectral state and suppressed rapid variability.
+        </li>
+
+        <li>
+          High-resolution RGS spectra were examined to search for narrow features 
+          around the Fe-L/Ne region.
+        </li>
+      </ul>
+
+      <h2>Spectral Model</h2>
+
+      <p>
+        The broadband spectra were fitted using the model:
+      </p>
+
+      <div class="highlight-box">
+        <p style="font-family: monospace; font-size: 15px;">
+          constant × edge × pcfabs × TBabs × (thcomp × diskbb + relxillCp)
+        </p>
+      </div>
+
+      <p>
+        This model allows us to describe the thermal disk emission, Comptonized 
+        continuum, relativistic reflection, and absorption-related spectral complexity 
+        in a consistent framework across the selected epochs.
+      </p>
+
+      <h2>Current Status</h2>
+
+      <p>
+        The manuscript based on this work is currently under preparation. This page will 
+        be updated with the preprint, poster PDF, analysis products, and related figures 
+        once they are available.
+      </p>
+
+      <h2>Conference Presentation</h2>
+
+      <p>
+        <span class="info-label">Poster:</span> Multi-Mission Broadband Spectral–Timing and 
+        High-Resolution X-ray Spectroscopy of GX 339-4 During the 2023 Outburst
+      </p>
+
+      <p>
+        <span class="info-label">Presented at:</span> 858. WE-Heraeus Seminar, 
+        <i>Galactic Frontiers 2026: Advancing X-ray Astronomy in a Multiwavelength Universe</i>
+      </p>
+
+      <p>
+        <span class="info-label">Venue:</span> Physikzentrum Bad Honnef, Germany
+      </p>
+
+      <h2>Links</h2>
+
+      <ul>
+        <li><a href="index.html">Main website</a></li>
+        <li><a href="https://prof-wanderful.github.io/" target="_blank">Exploring Dimensions homepage</a></li>
+        <!-- Add poster/preprint links here later -->
+        <!-- <li><a href="files/gx339_poster.pdf" target="_blank">Poster PDF</a></li> -->
+        <!-- <li><a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">Preprint</a></li> -->
+      </ul>
+
+      <div class="contact-box">
+        <h2>Contact</h2>
+
+        <p>
+          <span class="info-label">Dr. Ramanshu P. Singh</span><br>
+          Department of Physics<br>
+          Prof. Rajendra Singh (Rajju Bhaiya) Institute of Physical Sciences for Study and Research<br>
+          Veer Bahadur Singh Purvanchal University, Jaunpur, India
+        </p>
+
+        <p>
+          <span class="info-label">Website:</span> 
+          <a href="https://prof-wanderful.github.io/" target="_blank">
+            https://prof-wanderful.github.io/
+          </a>
+        </p>
+      </div>
+
+      <footer>
+        Last updated: June 2026
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    // Fetch and insert the navigation bar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
