@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <!--
     Plain-Academic by Vasilios Mavroudis
@@ -10,141 +11,308 @@
   <title>Research</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-</head>
-<style>
-    body {
-            font-family: Arial, sans-serif;
-            line-height: 1.5;
-            color:white;
-    }
-    h1 {
-            color: #007BFF;
-    }
-    h2 {
-        margin-top: 20px;
-        font-size: large;
-        font-weight: bold;
-        color:azure;
-    }
-    ul {
-        list-style-type: disc;
-        padding:0;
-        .authors {
-            color: skyblue;
-            font-weight: bold;
-        }
-        .title {
-            color:azure;
-            font-style: normal;
-        }
-        .journal {
-            color: azure;
-            font-style:italic;
-        }
-        .conference {
-            color: azure;
-            font-style:italic;
-        }
-        .institution {
-            color:paleturquoise;
-            font-style:normal;
-        }
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet" type="text/css">
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      color: white;
+    }
+
+    h1 {
+      color: #007BFF;
+    }
+
+    h2 {
+      margin-top: 20px;
+      font-size: large;
+      font-weight: bold;
+      color: azure;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 18px;
+    }
+
+    .authors {
+      color: skyblue;
+      font-weight: bold;
+    }
+
+    .title {
+      color: azure;
+      font-style: normal;
+    }
+
+    .journal {
+      color: azure;
+      font-style: italic;
+    }
+
+    .conference {
+      color: azure;
+      font-style: italic;
+    }
+
+    .institution {
+      color: paleturquoise;
+      font-style: normal;
     }
 
     /* Style current-research gifs */
     .current-research {
-        width: fit-content;
-        height: auto;
-        object-fit: cover; /* Ensure the image covers the available space */
+      width: fit-content;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .current-study-box {
+      margin-top: 18px;
+      width: 350px;
+      background: rgba(0, 0, 0, 0.58);
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #9ddcff;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.10);
+    }
+
+    .current-study-box h2 {
+      margin-top: 0;
+      color: azure;
+      font-size: 18px;
+    }
+
+    .current-study-box p {
+      color: white;
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .current-study-box a {
+      color: #9ddcff;
+      font-weight: bold;
+    }
+
+    .current-study-box a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    iframe.background-frame {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%; 
+      height: 100%;
+      z-index: -1;
     }
   </style>
-<body>
-    <div id="navbar-placeholder"></div>
-    <iframe src="background.html" frameborder="0" scrolling="no" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    <div class="container" style="position: relative; top:0">
-        <div class="row">
-            <div class="col-xs-12 col-sm-4" style="position:relative; margin-top: 2%">
-                <div class="current-research">
-                    <h1>Research Interests</h1>
-                    <h2>X-Ray Astronomy</h2>
-                    <img src="BHW_LMXB_Illustration.gif" alt="LMXB" width="350px" height="auto">
-                </div>
-            </div>
-            <!-- Publications -->
-            <div class="col-xs-12 col-sm-8" style="position:relative; left:0px; margin-top: 2%; text-align:justify;">    
-                <h1>Publications</h1>
-                <h2>Peer-reviewed Journal Articles</h2>
-                <ul>
-                    <li>
-                    <a class="authors">Ramanshu P. Singh, S. Yadav, Giridhar Mishra, Devraj Singh</a>, <a class="title" href="https://doi.org/10.1515/zna-2021-0013" target="_blank">"Pressure dependent ultrasonic
-                    properties of hcp hafnium metal"</a>, <a class="journal" href="https://www.degruyter.com/journal/key/zna/html">Zeitschrift für Naturforschung A</a>, vol.76, No.6, pp. 549-557, 2021.
-                    </li>
-                    <li>
-                    <a class="authors">S. Yadav, Ramanshu P. Singh, Giridhar Mishra, Devraj Singh</a>, <a class="title" href="https://doi.org/10.1515/zna-2021-0332" target="_blank">"Mechanical and thermophysical
-                    properties of 4d-transition mononitrides"</a>, <a class="journal" href="https://www.degruyter.com/journal/key/zna/html">Zeitschrift für Naturforschung A</a>, vol. 77, no. 7,
-                    pp. 701-713, 2022.
-                    </li>
-                    <li>
-                    <a class="authors">Ramanshu P. Singh, Shakti Yadav, Devraj Singh, Giridhar Mishra</a>, <a class="title" href="https://doi.org/10.22214/ijraset.2022.47382" target="_blank">"Theoretical approach to
-                    investigate temperature dependent Ultrasonic and Thermophysical Properties of Ti-Zr-Hf ternary alloy"</a>
-                    <a class="journal">International Journal for Research in Applied Science & Engineering Technology (IJRASET)</a>, vol 10,
-                    no. 11, pp 583-588, 2022.
-                    </li>
-                    <li>
-                    <a class="authors">Shakti Yadav, Ramanshu P. Singh, Devraj Singh, Giridhar Mishra</a>, <a class="title" href="publications/JPAU-44(3-4)-2022.pdf">"Investigation of temperature dependent mechanical, thermophysical and ultrasonic properties of ScZrHf ternary alloy"</a>, 
-                    <a class="journal">Journal of Pure and Applied Ultrasonics</a>, vol. 44, no. 3-4, pp. 79-85, 2022.
-                    </li>
-                    <li>
-                    <a class="authors">Ramanshu P. Singh, Shakti Yadav, Devraj Singh, Giridhar Mishra</a>, <a class="title" href="publications/AIR_4(1)2023.pdf">"Theoretical investigation of
-                    temperature dependent elastic, thermophysical and ultrasonic properties of Sc-Ti-Zr-Hf quaternary alloy"</a>,
-                    <a class="journal">Applied Innovative Research (AIR)</a>, vol 4, no. 1, pp 30-37, 2023.
-                    </li>
-                    <li>
-                    <a class="authors">Ramanshu P. Singh, Shakti Yadav, A. K. Tiwari, Giridhar Mishra</a>, <a class="title" href="publications/JPAU-45(3-4)-2023.pdf">"Theoretical Investigation of Mechanical and Thermal Features in ScTiZr and ScTiHf Alloys: A Comparative Study”</a>,
-                    <a class="journal">Journal of Pure and Applied Ultrasonics</a>, vol 45, no. 3, pp 50-59, 2023.
-                    </li>
-                    <li>
-                    <a class="authors">Roshni Srivastava, Ramanshu P. Singh, Giridhar Mishra</a>, <a class="title" href="https://doi.org/10.1515/zna-2024-0093">"Study of mechanical and thermophysical properties of Ni<sub>3</sub>Ti”</a>,
-                    <a class="journal">Zeitschrift für Naturforschung A</a>, vol 77, no. 11, pp 1135-1142, 2024.
-                    </li>
-                    <li>
-                    <a class="authors">Roshni Srivastava, Ramanshu P. Singh, Giridhar Mishra</a>, <a class="title" href="publications/JPAU-46(1-2)-2024.pdf">"Study of mechanical properties of β-Phase Zr-Ti-X Alloys (X= Al, V)”</a>,
-                    <a class="journal">Journal of Pure and Applied Ultrasonics</a>, vol 46, no. 1-2, pp 107-115, 2024.
-                    </li>
-                    <li>
-                    <a class="authors">Roshni Srivastava, Ramanshu P. Singh, Giridhar Mishra</a>, <a class="title" href="https://doi.org/10.25073/2588-1124/vnumap.5027">"Tailoring of Thermosensitive Ultrasonic and Mechanical Properties of ε-Fe<sub>3</sub>N”</a>,
-                    <a class="journal">VNU Journal of Science: Mathematics – Physics</a>, vol 41, no. 3, pp 107-115, 2025.
-                    </li>
-                </ul>
-                <!-- Talks and Presentation -->
-                
-                <h2>Talks and Presentation</h2>
-                <ul>
-                    <li>
-                        <a class="authors">Ramanshu P. Singh, Giridhar Mishra</a>, <a class="title">"Pressure dependent Ultrasonic parameters of hcp structured Hafnium metal"</a> in <a class="conference">International Conference on Ultrasonics and Materials Science for Advanced Technology (ICUMSAT-2019)</a>, organized by <a class="institution"> V. B. S. Purvanchal University, Jaunpur</a> Nov. 16-18, 2019 PaperID: O-121.
-                    </li>
-                    <li>
-                        <a class="authors">Ramanshu P. Singh, S. Yadav, Devraj Singh, Giridhar Mishra</a>, <a class="title">"Ultrasonic and thermophysical properties of binary and ternary alloys of transition metals Ti, Zr and Hf"</a> in <a class="conference">2nd International Conference on Recent Advances in Materials Science and Nanotechnology</a>, organized by <a class="institution"> G. S. Tompe Arts, Commerce & Science College, Chandur Bazar, Amravati</a> May 12-14, 2022, PAPERID: O-12.
-                    </li>
-                    <li>
-                        <a class="authors">Invited Lecture</a>, <a class="title">"Investigation of Ultrasonic and Thermophysical Properties of HCP Metals"</a> in <a class="conference"> International Conference on Ultrasonics and Material Science for Advanced Technology (ICUMSAT-2022) organized by <a class="institution">Telangana University, Nizamabad</a>, Aug 01-03, 2022.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    <script>
-        // Fetch and insert the navigation bar
-        fetch('navbar.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-          });
-    </script>
-</body>
+</head>
 
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <iframe 
+    src="background.html" 
+    frameborder="0" 
+    scrolling="no" 
+    class="background-frame">
+  </iframe>
+
+  <div class="container" style="position: relative; top: 0;">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-4" style="position: relative; margin-top: 2%;">
+        <div class="current-research">
+          <h1>Research Interests</h1>
+
+          <h2>X-Ray Astronomy</h2>
+
+          <img src="BHW_LMXB_Illustration.gif" alt="LMXB" width="350px" height="auto">
+
+          <div class="current-study-box">
+            <h2>Current Study</h2>
+
+            <p>
+              I am currently working on a multi-mission broadband spectral–timing study of 
+              the black hole X-ray binary GX 339-4 during its 2023–2024 outburst, using 
+              observations from NICER, NuSTAR, AstroSat, INTEGRAL, and XMM-Newton.
+            </p>
+
+            <p>
+              The study traces the source from intermediate states to a disk-dominated soft 
+              state, combining broadband spectral modelling, timing diagnostics, and 
+              high-resolution X-ray spectroscopy.
+            </p>
+
+            <p>
+              <a href="https://prof-wanderful.github.io/gx339-4.html" target="_blank">
+                View project page &raquo;
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Publications -->
+      <div class="col-xs-12 col-sm-8" style="position: relative; left: 0px; margin-top: 2%; text-align: justify;">    
+        <h1>Publications</h1>
+
+        <h2>Peer-reviewed Journal Articles</h2>
+
+        <ul>
+          <li>
+            <a class="authors">Ramanshu P. Singh, S. Yadav, Giridhar Mishra, Devraj Singh</a>, 
+            <a class="title" href="https://doi.org/10.1515/zna-2021-0013" target="_blank">
+              "Pressure dependent ultrasonic properties of hcp hafnium metal"
+            </a>, 
+            <a class="journal" href="https://www.degruyter.com/journal/key/zna/html" target="_blank">
+              Zeitschrift für Naturforschung A
+            </a>, vol. 76, no. 6, pp. 549–557, 2021.
+          </li>
+
+          <li>
+            <a class="authors">S. Yadav, Ramanshu P. Singh, Giridhar Mishra, Devraj Singh</a>, 
+            <a class="title" href="https://doi.org/10.1515/zna-2021-0332" target="_blank">
+              "Mechanical and thermophysical properties of 4d-transition mononitrides"
+            </a>, 
+            <a class="journal" href="https://www.degruyter.com/journal/key/zna/html" target="_blank">
+              Zeitschrift für Naturforschung A
+            </a>, vol. 77, no. 7, pp. 701–713, 2022.
+          </li>
+
+          <li>
+            <a class="authors">Ramanshu P. Singh, Shakti Yadav, Devraj Singh, Giridhar Mishra</a>, 
+            <a class="title" href="https://doi.org/10.22214/ijraset.2022.47382" target="_blank">
+              "Theoretical approach to investigate temperature dependent Ultrasonic and Thermophysical Properties of Ti-Zr-Hf ternary alloy"
+            </a>, 
+            <a class="journal">
+              International Journal for Research in Applied Science & Engineering Technology (IJRASET)
+            </a>, vol. 10, no. 11, pp. 583–588, 2022.
+          </li>
+
+          <li>
+            <a class="authors">Shakti Yadav, Ramanshu P. Singh, Devraj Singh, Giridhar Mishra</a>, 
+            <a class="title" href="publications/JPAU-44(3-4)-2022.pdf" target="_blank">
+              "Investigation of temperature dependent mechanical, thermophysical and ultrasonic properties of ScZrHf ternary alloy"
+            </a>, 
+            <a class="journal">
+              Journal of Pure and Applied Ultrasonics
+            </a>, vol. 44, no. 3–4, pp. 79–85, 2022.
+          </li>
+
+          <li>
+            <a class="authors">Ramanshu P. Singh, Shakti Yadav, Devraj Singh, Giridhar Mishra</a>, 
+            <a class="title" href="publications/AIR_4(1)2023.pdf" target="_blank">
+              "Theoretical investigation of temperature dependent elastic, thermophysical and ultrasonic properties of Sc-Ti-Zr-Hf quaternary alloy"
+            </a>, 
+            <a class="journal">
+              Applied Innovative Research (AIR)
+            </a>, vol. 4, no. 1, pp. 30–37, 2023.
+          </li>
+
+          <li>
+            <a class="authors">Ramanshu P. Singh, Shakti Yadav, A. K. Tiwari, Giridhar Mishra</a>, 
+            <a class="title" href="publications/JPAU-45(3-4)-2023.pdf" target="_blank">
+              "Theoretical Investigation of Mechanical and Thermal Features in ScTiZr and ScTiHf Alloys: A Comparative Study"
+            </a>, 
+            <a class="journal">
+              Journal of Pure and Applied Ultrasonics
+            </a>, vol. 45, no. 3, pp. 50–59, 2023.
+          </li>
+
+          <li>
+            <a class="authors">Roshni Srivastava, Ramanshu P. Singh, Giridhar Mishra</a>, 
+            <a class="title" href="https://doi.org/10.1515/zna-2024-0093" target="_blank">
+              "Study of mechanical and thermophysical properties of Ni<sub>3</sub>Ti"
+            </a>, 
+            <a class="journal">
+              Zeitschrift für Naturforschung A
+            </a>, vol. 77, no. 11, pp. 1135–1142, 2024.
+          </li>
+
+          <li>
+            <a class="authors">Roshni Srivastava, Ramanshu P. Singh, Giridhar Mishra</a>, 
+            <a class="title" href="publications/JPAU-46(1-2)-2024.pdf" target="_blank">
+              "Study of mechanical properties of β-Phase Zr-Ti-X Alloys (X = Al, V)"
+            </a>, 
+            <a class="journal">
+              Journal of Pure and Applied Ultrasonics
+            </a>, vol. 46, no. 1–2, pp. 107–115, 2024.
+          </li>
+
+          <li>
+            <a class="authors">Roshni Srivastava, Ramanshu P. Singh, Giridhar Mishra</a>, 
+            <a class="title" href="https://doi.org/10.25073/2588-1124/vnumap.5027" target="_blank">
+              "Tailoring of Thermosensitive Ultrasonic and Mechanical Properties of ε-Fe<sub>3</sub>N"
+            </a>, 
+            <a class="journal">
+              VNU Journal of Science: Mathematics – Physics
+            </a>, vol. 41, no. 3, pp. 107–115, 2025.
+          </li>
+        </ul>
+
+        <!-- Talks and Presentations -->
+        <h2>Talks and Presentations</h2>
+
+        <ul>
+          <li>
+            <a class="authors">Ramanshu P. Singh, Giridhar Mishra</a>, 
+            <a class="title">
+              "Pressure dependent Ultrasonic parameters of hcp structured Hafnium metal"
+            </a> in 
+            <a class="conference">
+              International Conference on Ultrasonics and Materials Science for Advanced Technology (ICUMSAT-2019)
+            </a>, organized by 
+            <a class="institution">
+              V. B. S. Purvanchal University, Jaunpur
+            </a>, Nov. 16–18, 2019. Paper ID: O-121.
+          </li>
+
+          <li>
+            <a class="authors">Ramanshu P. Singh, S. Yadav, Devraj Singh, Giridhar Mishra</a>, 
+            <a class="title">
+              "Ultrasonic and thermophysical properties of binary and ternary alloys of transition metals Ti, Zr and Hf"
+            </a> in 
+            <a class="conference">
+              2nd International Conference on Recent Advances in Materials Science and Nanotechnology
+            </a>, organized by 
+            <a class="institution">
+              G. S. Tompe Arts, Commerce & Science College, Chandur Bazar, Amravati
+            </a>, May 12–14, 2022. Paper ID: O-12.
+          </li>
+
+          <li>
+            <a class="authors">Invited Lecture</a>, 
+            <a class="title">
+              "Investigation of Ultrasonic and Thermophysical Properties of HCP Metals"
+            </a> in 
+            <a class="conference">
+              International Conference on Ultrasonics and Material Science for Advanced Technology (ICUMSAT-2022)
+            </a>, organized by 
+            <a class="institution">
+              Telangana University, Nizamabad
+            </a>, Aug. 01–03, 2022.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Fetch and insert the navigation bar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
 </html>
+```
