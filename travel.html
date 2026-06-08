@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
+
+<html lang="en">
+<head>
+  <title>Travel Information | Ramanshu P. Singh</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet" type="text/css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: white;
+      background-color: black;
+    }
+
+    h1 {
+      color: #007BFF;
+      font-family: 'Oswald', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: azure;
+      font-size: 22px;
+      margin-top: 25px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      padding-bottom: 6px;
+    }
+
+    a {
+      color: #9ddcff;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .travel-box {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 35px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 18px rgba(255, 255, 255, 0.12);
+    }
+
+    .important-box {
+      background: rgba(255, 255, 255, 0.08);
+      border-left: 4px solid #9ddcff;
+      padding: 16px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+
+    .info-table {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .info-table td {
+      padding: 8px 6px;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .label-cell {
+      color: #bfefff;
+      font-weight: bold;
+      width: 35%;
+    }
+
+    .status {
+      color: #d8f4ff;
+      font-size: 17px;
+    }
+
+    .small-note {
+      color: #cccccc;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    iframe.background-frame {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%; 
+      height: 100%;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 600px) {
+      .travel-box {
+        padding: 18px;
+        margin-top: 20px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .info-table td {
+        display: block;
+        width: 100%;
+        border-bottom: none;
+        padding: 4px 0;
+      }
+
+      .label-cell {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- Background -->
+  <iframe 
+    src="background.html" 
+    frameborder="0" 
+    scrolling="no" 
+    class="background-frame">
+  </iframe>
+
+  <div class="container" style="position: relative; top: 0;">
+    <div class="travel-box">
+
+      <h1>Travel Information</h1>
+
+      <p class="status">
+        This page is linked to my baggage tag. If this bag is found unattended or misplaced, 
+        kindly contact me using the details below.
+      </p>
+
+      <div class="important-box">
+        <p>
+          <strong>Owner:</strong> Dr. Ramanshu P. Singh<br>
+          <strong>Email:</strong> 
+          <a href="mailto:ramanshupsingh@gmail.com">ramanshupsingh@gmail.com</a>
+        </p>
+      </div>
+
+      <h2>Current Travel</h2>
+
+      <table class="info-table">
+        <tr>
+          <td class="label-cell">Purpose</td>
+          <td>Academic travel for the 858. WE-Heraeus Seminar</td>
+        </tr>
+
+        <tr>
+          <td class="label-cell">Event</td>
+          <td>
+            Galactic Frontiers 2026: Advancing X-ray Astronomy in a Multiwavelength Universe
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label-cell">Destination</td>
+          <td>Bad Honnef, Germany</td>
+        </tr>
+
+        <tr>
+          <td class="label-cell">Venue</td>
+          <td>
+            Physikzentrum Bad Honnef<br>
+            Hauptstrasse 5, 53604 Bad Honnef, Germany
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label-cell">Travel Dates</td>
+          <td>June 13-21, 2026</td>
+        </tr>
+      </table>
+
+      <h2>Suggested Action if Found</h2>
+
+      <div class="important-box">
+        <p>
+          If this baggage is found, please contact me by email at 
+          <a href="mailto:ramanshupsingh@gmail.com">ramanshupsingh@gmail.com</a>.
+        </p>
+
+        <p>
+          If found inside an airport, railway station, hotel, or conference venue, kindly hand it over 
+          to the nearest lost-and-found counter, security desk, airline desk, or reception.
+        </p>
+      </div>
+
+      <h2>Contact</h2>
+
+      <table class="info-table">
+        <tr>
+          <td class="label-cell">Name</td>
+          <td>Dr. Ramanshu P. Singh</td>
+        </tr>
+
+        <tr>
+          <td class="label-cell">Email</td>
+          <td>
+            <a href="mailto:ramanshupsingh@gmail.com">ramanshupsingh@gmail.com</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label-cell">Website</td>
+          <td>
+            <a href="https://prof-wanderful.github.io/" target="_blank">
+              https://prof-wanderful.github.io/
+            </a>
+          </td>
+        </tr>
+        <tr>
+            <td class="label-cell">Office Address</td>
+            <td>
+            Department of Physics<br>
+            Prof. Rajendra Singh (Rajju Bhaiya) Institute of Physical Sciences for Study and Research<br>
+            Veer Bahadur Singh Purvanchal University<br>
+            Jaunpur - 222001, Uttar Pradesh, India
+            </td>
+        </tr>
+        <!-- Optional: add phone number only if you are comfortable making it public -->
+        <!--
+        <tr>
+          <td class="label-cell">Phone / WhatsApp</td>
+          <td>+91-XXXXXXXXXX</td>
+        </tr>
+        -->
+      </table>
+
+      <p class="small-note">
+        Note: This page intentionally contains limited information for privacy and safety. 
+        Kindly use the contact details above only for returning or reporting this baggage.
+      </p>
+
+    </div>
+  </div>
+
+  <script>
+    // Fetch and insert the navigation bar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
