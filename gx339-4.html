@@ -27,9 +27,7 @@
       line-height: 1.6;
     }
 
-    h1, h2, h3 {
-      color: azure;
-    }
+    h1, h2, h3 { color: azure; }
 
     h1 {
       margin-top: 40px;
@@ -43,17 +41,16 @@
       padding-bottom: 6px;
     }
 
-    a {
-      color: #9ddcff;
+    h3 {
+      margin-top: 25px;
+      color: #d8f4ff;
     }
 
-    a:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
+    a { color: #9ddcff; }
+    a:hover { color: #ffffff; text-decoration: underline; }
 
     .content-box {
-      background: rgba(0, 0, 0, 0.62);
+      background: rgba(0, 0, 0, 0.68);
       padding: 25px;
       border-radius: 10px;
       margin-top: 30px;
@@ -80,6 +77,66 @@
       border-radius: 4px;
     }
 
+    .status-pill {
+      display: inline-block;
+      padding: 4px 10px;
+      margin: 3px 4px 3px 0;
+      border-radius: 15px;
+      background: rgba(157, 220, 255, 0.15);
+      border: 1px solid rgba(157, 220, 255, 0.45);
+      color: #d8f4ff;
+      font-size: 13px;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0 28px 0;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    table.manuscript-table {
+      width: 100%;
+      min-width: 900px;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      line-height: 1.45;
+    }
+
+    table.manuscript-table th,
+    table.manuscript-table td {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 7px 9px;
+      vertical-align: top;
+    }
+
+    table.manuscript-table th {
+      background: rgba(157, 220, 255, 0.18);
+      color: #ffffff;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    table.manuscript-table tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    table.manuscript-table td.section-row {
+      background: rgba(157, 220, 255, 0.12) !important;
+      color: #d8f4ff;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .table-note {
+      color: #dddddd;
+      font-size: 13px;
+      margin-top: -14px;
+      margin-bottom: 22px;
+    }
+
     .contact-box {
       margin-top: 25px;
       padding: 15px;
@@ -87,9 +144,7 @@
       border-radius: 6px;
     }
 
-    ul {
-      margin-top: 10px;
-    }
+    ul { margin-top: 10px; }
 
     footer {
       margin-top: 35px;
@@ -102,7 +157,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%; 
+      width: 100%;
       height: 100%;
       z-index: -1;
     }
@@ -114,12 +169,7 @@
   <div id="navbar-placeholder"></div>
 
   <!-- Background -->
-  <iframe 
-    src="background.html" 
-    frameborder="0" 
-    scrolling="no" 
-    class="background-frame">
-  </iframe>
+  <iframe src="background.html" frameborder="0" scrolling="no" class="background-frame"></iframe>
 
   <div class="container" style="position: relative; top: 0;">
     <div class="content-box">
@@ -132,74 +182,154 @@
 
       <div class="highlight-box">
         <p>
-          This page accompanies my poster presentation on the broadband spectral–timing 
-          evolution and high-resolution X-ray spectroscopy of GX 339-4 during its 
-          2023–2024 outburst.
+          This page accompanies our broadband spectral–timing study of GX 339-4 during its
+          2023–2024 outburst. The selected epochs trace the source from an intermediate
+          state close to the HIMS/SIMS boundary, through a clear soft-intermediate state
+          with a narrow low-frequency QPO, and finally into a disk-dominated soft state.
+        </p>
+        <p>
+          <span class="status-pill">Epoch 1: HIMS/SIMS boundary</span>
+          <span class="status-pill">Epoch 2: SIMS with ~4.6 Hz LFQPO</span>
+          <span class="status-pill">Epoch 3: Soft / thermal state</span>
         </p>
       </div>
 
       <h2>Project Overview</h2>
 
       <p>
-        GX 339-4 is one of the most extensively studied black hole X-ray binaries and 
-        provides an excellent laboratory for investigating accretion physics, state 
-        transitions, disk–corona coupling, and reflection from the inner accretion flow.
+        GX 339-4 is a recurrent black hole low-mass X-ray binary and a benchmark source for
+        studying accretion-state evolution. In this work, we use coordinated observations
+        from <i>NICER</i>, <i>NuSTAR</i>, <i>AstroSat</i>, <i>INTEGRAL</i>, and
+        <i>XMM-Newton</i> to investigate how the thermal disk, Comptonized continuum,
+        relativistic reflection, and fast variability evolve during the 2023–2024 outburst.
       </p>
 
       <p>
-        In this work, we study selected epochs from the 2023–2024 outburst using 
-        coordinated observations from multiple X-ray missions. The selected observations 
-        trace the source from an intermediate state close to the HIMS/SIMS boundary, 
-        through a soft-intermediate state with a narrow low-frequency QPO, and finally 
-        into a disk-dominated soft state.
+        Epochs 1 and 2 have similar time-averaged broadband spectra, with disk temperatures
+        near 0.76 keV and photon indices near 2.14–2.16. The key distinction is provided by
+        timing: Epoch 2 shows a narrow LFQPO near 4.6 Hz, detected with <i>NICER</i>,
+        <i>NuSTAR</i>, and <i>AstroSat</i>/LAXPC. Epoch 3 is cooler and more disk dominated,
+        with substantially weaker reflection.
       </p>
 
       <h2>Observatories and Instruments</h2>
 
       <ul>
-        <li><i>NICER</i></li>
-        <li><i>NuSTAR</i></li>
+        <li><i>NICER</i> / XTI</li>
+        <li><i>NuSTAR</i> / FPMA and FPMB</li>
         <li><i>AstroSat</i> / SXT and LAXPC</li>
         <li><i>INTEGRAL</i> / ISGRI and SPI</li>
-        <li><i>XMM-Newton</i> / EPIC-pn and RGS</li>
+        <li><i>XMM-Newton</i> / EPIC-pn</li>
+        <li>MAXI monitoring data for long-term light-curve and hardness–intensity context</li>
       </ul>
+
+      <h2>Observation Log</h2>
+
+      <div class="table-wrap">
+        <table class="manuscript-table">
+          <thead>
+            <tr>
+              <th>Spectral state</th>
+              <th>Representative MJD</th>
+              <th>Mission</th>
+              <th>Instrument(s)</th>
+              <th>ObsID / Revolution</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">Epoch 1</td>
+              <td rowspan="2">60340.5</td>
+              <td>NICER</td>
+              <td>XTI</td>
+              <td>7702010101</td>
+              <td>Night- and day-time data reduced separately for light-leak check</td>
+            </tr>
+            <tr>
+              <td>NuSTAR</td>
+              <td>FPMA/FPMB</td>
+              <td>91001304002</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td rowspan="4">Epoch 2</td>
+              <td rowspan="4">60355</td>
+              <td>NICER</td>
+              <td>XTI</td>
+              <td>7702010112</td>
+              <td>Night-time data only; no day-time exposure</td>
+            </tr>
+            <tr>
+              <td>AstroSat</td>
+              <td>SXT, LAXPC</td>
+              <td>9000006070</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>NuSTAR</td>
+              <td>FPMA/FPMB</td>
+              <td>91002306002</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>INTEGRAL</td>
+              <td>ISGRI, SPI</td>
+              <td>Rev. 2743–2745</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td rowspan="3">Epoch 3</td>
+              <td rowspan="3">60379</td>
+              <td>XMM-Newton</td>
+              <td>EPIC-pn</td>
+              <td>0923680101</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>NuSTAR</td>
+              <td>FPMA/FPMB</td>
+              <td>80902342002</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>INTEGRAL</td>
+              <td>ISGRI</td>
+              <td>Rev. 2753</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">
+        Different missions contribute at different epochs to maximize broadband spectral coverage.
+      </p>
 
       <h2>Analysis Highlights</h2>
 
       <ul>
         <li>
-          Broadband spectral fitting was performed using a common physical model 
-          including disk emission, thermal Comptonization, relativistic reflection, 
-          absorption, and partial covering.
+          Broadband spectral fitting was performed with a common model including disk emission,
+          thermal Comptonization, relativistic reflection, interstellar absorption, empirical
+          partial covering, and soft-band edge corrections.
         </li>
-
         <li>
-          Epochs 1 and 2 show broadly similar time-averaged spectral shapes, with 
-          only moderate changes in the Comptonized and reflected components.
+          Epoch 2 provides the widest spectral coverage, from approximately 0.6 to 200 keV,
+          using NICER, NuSTAR, AstroSat/SXT, AstroSat/LAXPC, INTEGRAL/ISGRI, and INTEGRAL/SPI.
         </li>
-
         <li>
-          Timing diagnostics provide the key distinction between these epochs, with 
-          a clear low-frequency QPO detected during Epoch 2.
+          A narrow LFQPO near 4.6 Hz is detected during Epoch 2. Its rms increases from about
+          1–1.2% in the NICER 1–10 keV band to about 8% in the NuSTAR/LAXPC 3–50 keV band.
         </li>
-
         <li>
-          In the later soft-state epoch, the Comptonized emission and reflection 
-          contribution are substantially reduced, consistent with a disk-dominated 
-          spectral state and suppressed rapid variability.
-        </li>
-
-        <li>
-          High-resolution RGS spectra were examined to search for narrow features 
-          around the Fe-L/Ne region.
+          Epoch 3 shows a cooler disk, reduced Comptonized contribution, and weak reflection,
+          consistent with a soft/thermal-state classification.
         </li>
       </ul>
 
       <h2>Spectral Model</h2>
 
-      <p>
-        The broadband spectra were fitted using the model:
-      </p>
+      <p>The broadband spectra were fitted using the model:</p>
 
       <div class="highlight-box">
         <p style="font-family: monospace; font-size: 15px;">
@@ -208,28 +338,151 @@
       </div>
 
       <p>
-        This model allows us to describe the thermal disk emission, Comptonized 
-        continuum, relativistic reflection, and absorption-related spectral complexity 
-        in a consistent framework across the selected epochs.
+        The <code>diskbb</code> component describes the multicolour thermal disk,
+        <code>thcomp</code> accounts for Comptonization of disk photons, and
+        <code>relxillCp</code> models the relativistic reflection spectrum. The reflection
+        fraction was fixed to −1 so that <code>relxillCp</code> contributes only the reflected
+        component. The black-hole spin was fixed at <i>a</i> = 0.985, the electron temperature
+        at 150 keV, the emissivity indices at <i>q</i><sub>1</sub> = <i>q</i><sub>2</sub> = 3,
+        and the outer disk radius at 400 <i>r</i><sub>g</sub>. The <code>pcfabs</code> and
+        <code>edge</code> terms are used as empirical corrections for residual soft-band
+        curvature and calibration features.
+      </p>
+
+      <h2>Best-fit Broadband Spectral Parameters</h2>
+
+      <div class="table-wrap">
+        <table class="manuscript-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Parameter</th>
+              <th>Epoch 1</th>
+              <th>Epoch 2</th>
+              <th>Epoch 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>pcfabs</td><td>N<sub>H</sub> (10<sup>22</sup> cm<sup>−2</sup>)</td><td>26.80<sup>+4.28</sup><sub>−5.57</sub></td><td>22.95<sup>+2.55</sup><sub>−2.55</sub></td><td>37.15<sup>+4.96</sup><sub>−5.22</sub></td></tr>
+            <tr><td></td><td>Covering fraction</td><td>0.1849<sup>+0.0265</sup><sub>−0.0327</sub></td><td>0.2302<sup>+0.0353</sup><sub>−0.0353</sub></td><td>0.4106<sup>+0.0285</sup><sub>−0.0056</sub></td></tr>
+            <tr><td>TBabs</td><td>N<sub>H</sub> (10<sup>22</sup> cm<sup>−2</sup>)</td><td>0.6459<sup>+0.0045</sup><sub>−0.0045</sub></td><td>0.6420<sup>+0.0081</sup><sub>−0.0092</sub></td><td>0.5839<sup>+0.0204</sup><sub>−0.0243</sub></td></tr>
+            <tr><td>thcomp</td><td>Covering fraction</td><td>0.0263<sup>+0.0059</sup><sub>−0.0060</sub></td><td>0.0382<sup>+0.0036</sup><sub>−0.0072</sub></td><td>0.0045<sup>+0.0007</sup><sub>−0.0011</sub></td></tr>
+            <tr><td>diskbb</td><td>kT<sub>in</sub> (keV)</td><td>0.7645<sup>+0.0043</sup><sub>−0.0073</sub></td><td>0.7537<sup>+0.0070</sup><sub>−0.0020</sub></td><td>0.5991<sup>+0.0071</sup><sub>−0.0052</sub></td></tr>
+            <tr><td></td><td>Norm</td><td>3218<sup>t</sup></td><td>3312<sup>t</sup></td><td>6397<sup>t</sup></td></tr>
+            <tr><td>relxillCp</td><td>Inclination (deg)</td><td>19.87<sup>+2.17</sup><sub>−1.76</sub></td><td>18.53<sup>+3.74</sup><sub>−3.70</sub></td><td>22.87<sup>+1.01</sup><sub>−4.63</sub></td></tr>
+            <tr><td></td><td>Spin (<i>a</i>)</td><td>0.985<sup>f</sup></td><td>0.985<sup>f</sup></td><td>0.985<sup>f</sup></td></tr>
+            <tr><td></td><td>R<sub>in</sub></td><td>−2.906<sup>+0.114</sup><sub>−0.088</sub></td><td>−2.936<sup>+0.239</sup><sub>−0.132</sub></td><td>−4.140<sup>+0.041</sup><sub>−0.173</sub></td></tr>
+            <tr><td></td><td>Photon index Γ</td><td>2.157<sup>+0.009</sup><sub>−0.022</sub></td><td>2.142<sup>+0.018</sup><sub>−0.017</sub></td><td>2.043<sup>+0.018</sup><sub>−0.054</sub></td></tr>
+            <tr><td></td><td>log ξ (erg cm s<sup>−1</sup>)</td><td>3.477<sup>+0.045</sup><sub>−0.083</sub></td><td>3.547<sup>+0.058</sup><sub>−0.033</sub></td><td>3.212<sup>+0.189</sup><sub>−0.100</sub></td></tr>
+            <tr><td></td><td>log n<sub>e</sub> (cm<sup>−3</sup>)</td><td>&gt; 19.64</td><td>&gt; 19.68</td><td>&gt; 19.57</td></tr>
+            <tr><td></td><td>A<sub>Fe</sub></td><td>&gt; 4.46</td><td>&gt; 4.50</td><td>&gt; 4.06</td></tr>
+            <tr><td></td><td>kT<sub>e</sub> (keV)</td><td>150<sup>f</sup></td><td>150<sup>f</sup></td><td>150<sup>f</sup></td></tr>
+            <tr><td></td><td>Norm</td><td>0.1019<sup>+0.0020</sup><sub>−0.0027</sub></td><td>0.1318<sup>+0.0059</sup><sub>−0.0037</sub></td><td>0.00913<sup>+0.00143</sup><sub>−0.00070</sub></td></tr>
+            <tr><td colspan="5" class="section-row">Cross-calibration constants</td></tr>
+            <tr><td>FPMA</td><td>Constant</td><td>1<sup>f</sup></td><td>1<sup>f</sup></td><td>1<sup>f</sup></td></tr>
+            <tr><td>FPMB</td><td>Constant</td><td>1.0068<sup>+0.0031</sup><sub>−0.0032</sub></td><td>1.0085<sup>+0.0030</sup><sub>−0.0030</sub></td><td>0.9744<sup>+0.0040</sup><sub>−0.0040</sub></td></tr>
+            <tr><td>NICER (night)</td><td>Constant</td><td>0.9903<sup>+0.0074</sup><sub>−0.0075</sub></td><td>0.9632<sup>+0.0053</sup><sub>−0.0052</sub></td><td>—</td></tr>
+            <tr><td>NICER (day)</td><td>Constant</td><td>0.9840<sup>+0.0076</sup><sub>−0.0075</sub></td><td>—</td><td>—</td></tr>
+            <tr><td>LAXPC</td><td>Constant</td><td>—</td><td>0.6774<sup>+0.0101</sup><sub>−0.0101</sub></td><td>—</td></tr>
+            <tr><td>ISGRI (rev 2743)</td><td>Constant</td><td>—</td><td>0.7956<sup>+0.0339</sup><sub>−0.0339</sub></td><td>—</td></tr>
+            <tr><td>ISGRI (rev 2744)</td><td>Constant</td><td>—</td><td>0.7387<sup>+0.0252</sup><sub>−0.0253</sub></td><td>—</td></tr>
+            <tr><td>ISGRI (rev 2753)</td><td>Constant</td><td>—</td><td>—</td><td>1.2004<sup>+0.1659</sup><sub>−0.1648</sub></td></tr>
+            <tr><td>SPI</td><td>Constant</td><td>—</td><td>0.9492<sup>+0.0738</sup><sub>−0.0737</sub></td><td>—</td></tr>
+            <tr><td>SXT</td><td>Constant</td><td>—</td><td>0.1089<sup>+0.0016</sup><sub>−0.0017</sub></td><td>—</td></tr>
+            <tr><td>EPIC-pn</td><td>Constant</td><td>—</td><td>—</td><td>1.2088<sup>+0.0144</sup><sub>−0.0140</sub></td></tr>
+            <tr><td colspan="5" class="section-row">Instrumental corrections</td></tr>
+            <tr><td>Edge</td><td>E<sub>edge</sub> (keV)</td><td>0.8212<sup>+0.0120</sup><sub>−0.0128</sub></td><td>0.8199<sup>+0.0214</sup><sub>−0.0221</sub> (NICER); 0.7461<sup>+0.1104</sup><sub>−0.3978</sub> (SXT)</td><td>0.8066<sup>+0.0703</sup><sub>−0.0533</sub></td></tr>
+            <tr><td></td><td>τ<sub>max</sub></td><td>0.1524<sup>+0.0160</sup><sub>−0.0151</sub></td><td>0.1305<sup>+0.0337</sup><sub>−0.0292</sub> (NICER); 0.1521<sup>+0.1547</sup><sub>−0.1033</sub> (SXT)</td><td>0.1299<sup>+0.0674</sup><sub>−0.0928</sub></td></tr>
+            <tr><td colspan="5" class="section-row">Individual χ² contributions</td></tr>
+            <tr><td>FPMA</td><td>χ² (bins)</td><td>173.90 (164)</td><td>179.67 (159)</td><td>138.07 (134)</td></tr>
+            <tr><td>FPMB</td><td>χ² (bins)</td><td>183.24 (166)</td><td>194.93 (161)</td><td>139.13 (135)</td></tr>
+            <tr><td>NICER (night)</td><td>χ² (bins)</td><td>86.59 (125)</td><td>59.43 (138)</td><td>—</td></tr>
+            <tr><td>NICER (day)</td><td>χ² (bins)</td><td>98.70 (122)</td><td>—</td><td>—</td></tr>
+            <tr><td>LAXPC</td><td>χ² (bins)</td><td>—</td><td>11.38 (18)</td><td>—</td></tr>
+            <tr><td>ISGRI (rev 2743)</td><td>χ² (bins)</td><td>—</td><td>26.65 (24)</td><td>—</td></tr>
+            <tr><td>ISGRI (rev 2744)</td><td>χ² (bins)</td><td>—</td><td>30.06 (24)</td><td>—</td></tr>
+            <tr><td>SPI</td><td>χ² (bins)</td><td>—</td><td>10.91 (20)</td><td>—</td></tr>
+            <tr><td>SXT</td><td>χ² (bins)</td><td>—</td><td>99.65 (95)</td><td>—</td></tr>
+            <tr><td>EPIC-pn</td><td>χ² (bins)</td><td>—</td><td>—</td><td>56.97 (65)</td></tr>
+            <tr><td>ISGRI (rev 2753)</td><td>χ² (bins)</td><td>—</td><td>—</td><td>13.24 (18)</td></tr>
+            <tr><td colspan="2"><b>χ²/d.o.f.</b></td><td><b>542.43/560</b></td><td><b>612.69/615</b></td><td><b>347.41/335</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">
+        Errors are quoted at the 90% confidence level. Superscripts f and t denote frozen and tied parameters, respectively.
+        Negative values of R<sub>in</sub> follow the relxillCp convention and denote radii expressed in units of the ISCO.
+      </p>
+
+      <h2>Unabsorbed Broadband Model Fluxes</h2>
+
+      <div class="table-wrap">
+        <table class="manuscript-table">
+          <thead>
+            <tr>
+              <th>Epoch</th>
+              <th>State</th>
+              <th>F<sub>tot</sub></th>
+              <th>F<sub>diskbb</sub></th>
+              <th>F<sub>relxillCp</sub></th>
+              <th>f<sub>diskbb</sub></th>
+              <th>f<sub>relxillCp</sub></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Epoch 1</td>
+              <td>HIMS/SIMS boundary</td>
+              <td>(3.32<sup>+0.08</sup><sub>−0.15</sub>) × 10<sup>−8</sup></td>
+              <td>(2.36<sup>+0.16</sup><sub>−0.04</sub>) × 10<sup>−8</sup></td>
+              <td>(8.55<sup>+0.48</sup><sub>−0.49</sub>) × 10<sup>−9</sup></td>
+              <td>0.712<sup>+0.085</sup><sub>−0.028</sub></td>
+              <td>0.258<sup>+0.027</sup><sub>−0.020</sub></td>
+            </tr>
+            <tr>
+              <td>Epoch 2</td>
+              <td>SIMS</td>
+              <td>(3.44<sup>+0.02</sup><sub>−0.22</sub>) × 10<sup>−8</sup></td>
+              <td>(2.39<sup>+0.24</sup><sub>−0.22</sub>) × 10<sup>−8</sup></td>
+              <td>(1.04<sup>+0.06</sup><sub>−0.04</sub>) × 10<sup>−8</sup></td>
+              <td>0.695<sup>+0.121</sup><sub>−0.068</sub></td>
+              <td>0.303<sup>+0.038</sup><sub>−0.015</sub></td>
+            </tr>
+            <tr>
+              <td>Epoch 3</td>
+              <td>Soft</td>
+              <td>(1.88<sup>+0.11</sup><sub>−0.01</sub>) × 10<sup>−8</sup></td>
+              <td>(1.80<sup>+0.10</sup><sub>−0.12</sub>) × 10<sup>−8</sup></td>
+              <td>(9.34<sup>+0.93</sup><sub>−0.26</sub>) × 10<sup>−10</sup></td>
+              <td>0.956<sup>+0.061</sup><sub>−0.115</sub></td>
+              <td>0.050<sup>+0.005</sup><sub>−0.004</sub></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">
+        Fluxes are in erg cm<sup>−2</sup> s<sup>−1</sup> and were calculated over 0.01–1000 keV using
+        <code>cflux</code>. The disk and reflection fractions are defined relative to the independently
+        measured total model flux.
       </p>
 
       <h2>Current Status</h2>
 
       <p>
-        The manuscript based on this work is currently under preparation. This page will 
-        be updated with the preprint, poster PDF, analysis products, and related figures 
-        once they are available.
+        The manuscript based on this work is currently under preparation. This page will be
+        updated with the preprint, poster PDF, analysis products, and related figures once they
+        are available.
       </p>
 
       <h2>Conference Presentation</h2>
 
       <p>
-        <span class="info-label">Poster:</span> Multi-Mission Broadband Spectral–Timing and 
+        <span class="info-label">Poster:</span> Multi-Mission Broadband Spectral–Timing and
         High-Resolution X-ray Spectroscopy of GX 339-4 During the 2023 Outburst
       </p>
 
       <p>
-        <span class="info-label">Presented at:</span> 858. WE-Heraeus Seminar, 
+        <span class="info-label">Presented at:</span> 858. WE-Heraeus Seminar,
         <i>Galactic Frontiers 2026: Advancing X-ray Astronomy in a Multiwavelength Universe</i>
       </p>
 
@@ -257,7 +510,7 @@
         </p>
 
         <p>
-          <span class="info-label">Website:</span> 
+          <span class="info-label">Website:</span>
           <a href="https://prof-wanderful.github.io/" target="_blank">
             https://prof-wanderful.github.io/
           </a>
