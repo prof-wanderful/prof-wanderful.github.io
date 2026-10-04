@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Particle Background</title>
+  <title>Interactive Particle Animation</title>
   <style>
     html,
     body {
       margin: 0;
-      margin: 0;
-      padding: 0;
       width: 100%;
       height: 100%;
       overflow: hidden;
@@ -18,44 +16,27 @@
 
     canvas {
       position: fixed;
-      position: fixed;
       inset: 0;
       display: block;
       width: 100%;
       height: 100%;
-      background: #000;
     }
   </style>
 </head>
-
 <body>
   <canvas id="particles"></canvas>
 
   <script>
     const canvas = document.getElementById('particles');
     const ctx = canvas.getContext('2d');
+
     const particles = [];
-
     const numParticles = 70;
-
-    /*
-    --------------------------------------------------
-    CANVAS SIZE
-    --------------------------------------------------
-    */
 
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
-
-    resizeCanvas();
-
-    /*
-    --------------------------------------------------
-    CREATE PARTICLES
-    --------------------------------------------------
-    */
 
     function createParticles() {
       particles.length = 0;
@@ -91,98 +72,8 @@
         if (particle.y > canvas.height) particle.y = 0;
         if (particle.y < 0) particle.y = canvas.height;
       }
-    }
-      }
-
-    }
-
-    createParticles();
-
-
-    /*
-    --------------------------------------------------
-    DRAW AND MOVE STARS
-    --------------------------------------------------
-    */
-
-    function animate() {
-
-      /*
-      Black background
-      */
-
-      ctx.fillStyle = "black";
-
-      ctx.fillRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-      );
-
-
-      /*
-      Draw every star
-      */
-
-      for (let i = 0; i < particles.length; i++) {
-
-        const particle = particles[i];
-
-
-        /*
-        Draw star
-        */
-
-        ctx.fillStyle = "white";
-
-        ctx.beginPath();
-
-        ctx.arc(
-          particle.x,
-          particle.y,
-          particle.size,
-          0,
-          Math.PI * 2
-        );
-
-        ctx.fill();
-
-
-        /*
-        Move star
-        */
-
-        particle.x += particle.speedX;
-
-        particle.y += particle.speedY;
-
-
-        /*
-        Wrap stars around screen
-        */
-
-        if (particle.x > canvas.width) {
-          particle.x = 0;
-        }
-
-        if (particle.x < 0) {
-          particle.x = canvas.width;
-        }
-
-        if (particle.y > canvas.height) {
-          particle.y = 0;
-        }
-
-        if (particle.y < 0) {
-          particle.y = canvas.height;
-        }
-
-      }
-
 
       requestAnimationFrame(animate);
-
     }
 
     function interactWithPointer(mouseX, mouseY) {
@@ -203,23 +94,8 @@
     createParticles();
     animate();
 
-    function interactWithPointer(mouseX, mouseY) {
-      for (let i = 0; i < particles.length; i++) {
-        const particle = particles[i];
-
-        const dx = mouseX - particle.x;
-        const dy = mouseY - particle.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-
-        if (distance < 50) {
-          particle.speedX = dx * 0.005;
-          particle.speedY = dy * 0.005;
-        }
-      }
-    }
-
     // Works when background.html is opened by itself.
-    canvas.addEventListener('pointermove', (event) => {
+    window.addEventListener('pointermove', (event) => {
       interactWithPointer(event.clientX, event.clientY);
     }, { passive: true });
 
@@ -237,26 +113,7 @@
       }
     });
 
-    if (window.parent !== window) {
-      try {
-        if (window.frameElement) {
-          window.frameElement.style.pointerEvents = 'none';
-        }
-
-        window.parent.document.addEventListener('pointermove', (event) => {
-          interactWithPointer(event.clientX, event.clientY);
-        }, { capture: true, passive: true });
-      } catch (error) {
-        console.log('Parent page pointer tracking unavailable:', error);
-      }
-    }
-
     window.addEventListener('resize', resizeCanvas);
-
-    createParticles();
-    animate();
   </script>
-
 </body>
-
 </html>
