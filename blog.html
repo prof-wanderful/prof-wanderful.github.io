@@ -14,6 +14,35 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+
+  <!-- Shared star-background layering -->
+  <style id="star-background-layering">
+    iframe.background-frame,
+    iframe[src="background.html"] {
+      position: fixed !important;
+      inset: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      border: 0 !important;
+      z-index: 0 !important;
+      pointer-events: none !important;
+    }
+
+    #background-placeholder {
+      position: fixed !important;
+      inset: 0 !important;
+      z-index: 0 !important;
+      pointer-events: none !important;
+    }
+
+    #navbar-placeholder,
+    body > .container {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+  <script src="background-bridge.js" defer></script>
+
 </head>
 <style>
     body {
@@ -53,7 +82,7 @@
 </style>
 <body>
     <div id="navbar-placeholder"></div>
-    <iframe src="background.html" frameborder="0" scrolling="no" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    <iframe src="background.html" frameborder="0" scrolling="no" class="background-frame"></iframe>
     <div class="container" style="position: relative; top:0">
       <h1 style="text-align: center;">Reflections & Realities</h1>
       <div class="container">

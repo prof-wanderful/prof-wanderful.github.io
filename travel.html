@@ -135,6 +135,35 @@
       }
     }
   </style>
+
+  <!-- Shared star-background layering -->
+  <style id="star-background-layering">
+    iframe.background-frame,
+    iframe[src="background.html"] {
+      position: fixed !important;
+      inset: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      border: 0 !important;
+      z-index: 0 !important;
+      pointer-events: none !important;
+    }
+
+    #background-placeholder {
+      position: fixed !important;
+      inset: 0 !important;
+      z-index: 0 !important;
+      pointer-events: none !important;
+    }
+
+    #navbar-placeholder,
+    body > .container {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+  <script src="background-bridge.js" defer></script>
+
 </head>
 
 <body>
@@ -281,6 +310,7 @@
         iframe.frameBorder = '0';
         iframe.scrolling = 'no';
         iframe.className = 'background-frame';
+        iframe.id = 'star-background';
 
         iframe.onload = function () {
           iframe.classList.add('loaded');

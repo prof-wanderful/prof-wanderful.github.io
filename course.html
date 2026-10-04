@@ -54,9 +54,38 @@
             color:rgb(238, 169, 169)
         }
     </style>
+
+  <!-- Shared star-background layering -->
+  <style id="star-background-layering">
+    iframe.background-frame,
+    iframe[src="background.html"] {
+      position: fixed !important;
+      inset: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      border: 0 !important;
+      z-index: 0 !important;
+      pointer-events: none !important;
+    }
+
+    #background-placeholder {
+      position: fixed !important;
+      inset: 0 !important;
+      z-index: 0 !important;
+      pointer-events: none !important;
+    }
+
+    #navbar-placeholder,
+    body > .container {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+  <script src="background-bridge.js" defer></script>
+</head>
 <body>
     <div id="navbar-placeholder"></div>
-    <<iframe src="background.html" frameborder="0" scrolling="no" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    <iframe src="background.html" frameborder="0" scrolling="no" class="background-frame"></iframe>
     <div class="container">
         <div style = "position:relative; top:0; text-align: justify;">
             <h1>Courses Taught</h1>
