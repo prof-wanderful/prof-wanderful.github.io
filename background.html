@@ -1,89 +1,345 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8"> <!-- Character encoding declaration -->
-  <title>Interactive Particle Animation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Interactive Particle Background</title>
+
   <style>
+    html,
     body {
       margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
       overflow: hidden;
+      background: black;
     }
+
     canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
       display: block;
+
+      background: black;
     }
   </style>
 </head>
-<body>
-  <canvas id="particles"></canvas>
-  <script>
-    const canvas = document.getElementById('particles');
-    const ctx = canvas.getContext('2d');
 
-    // Set canvas size to match the window size
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+<body>
+
+  <canvas id="particles"></canvas>
+
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
 
     const particles = [];
+
     const numParticles = 70;
 
-    for (let i = 0; i < numParticles; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        size: Math.random() * 3 + 1, // Smaller particle size
-        speedX: Math.random() - 0.6, // Slower horizontal speed
-        speedY: Math.random() - 0.6, // Slower vertical speed
-      });
+    /*
+    --------------------------------------------------
+    CANVAS SIZE
+    --------------------------------------------------
+    */
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     }
 
-    function animate() {
-      ctx.fillStyle = 'black'; // Set canvas background color to black
-      ctx.fillRect(0, 0, canvas.width, canvas.height); // Fill the entire canvas with black
+    resizeCanvas();
 
-      for (let i = 0; i < particles.length; i++) {
-        ctx.fillStyle = 'white'; // Set particle color to white
-        ctx.beginPath();
-        ctx.arc(particles[i].x, particles[i].y, particles[i].size, 0, Math.PI * 2);
-        ctx.fill();
 
-        particles[i].x += particles[i].speedX;
-        particles[i].y += particles[i].speedY;
+    /*
+    --------------------------------------------------
+    CREATE STARS
+    --------------------------------------------------
+    */
 
-        if (particles[i].x > canvas.width) {
-          particles[i].x = 0;
-        }
-        if (particles[i].x < 0) {
-          particles[i].x = canvas.width;
-        }
-        if (particles[i].y > canvas.height) {
-          particles[i].y = 0;
-        }
-        if (particles[i].y < 0) {
-          particles[i].y = canvas.height;
-        }
+    function createParticles() {
+
+      particles.length = 0;
+
+      for (let i = 0; i < numParticles; i++) {
+
+        particles.push({
+
+          x: Math.random() * canvas.width,
+
+          y: Math.random() * canvas.height,
+
+          size: Math.random() * 3 + 1,
+
+          speedX: Math.random() - 0.6,
+
+          speedY: Math.random() - 0.6
+
+        });
+
       }
 
+    }
+
+    createParticles();
+
+
+    /*
+    --------------------------------------------------
+    DRAW AND MOVE STARS
+    --------------------------------------------------
+    */
+
+    function animate() {
+
+      /*
+      Black background
+      */
+
+      ctx.fillStyle = "black";
+
+      ctx.fillRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
+
+
+      /*
+      Draw every star
+      */
+
+      for (let i = 0; i < particles.length; i++) {
+
+        const particle = particles[i];
+
+
+        /*
+        Draw star
+        */
+
+        ctx.fillStyle = "white";
+
+        ctx.beginPath();
+
+        ctx.arc(
+          particle.x,
+          particle.y,
+          particle.size,
+          0,
+          Math.PI * 2
+        );
+
+        ctx.fill();
+
+
+        /*
+        Move star
+        */
+
+        particle.x += particle.speedX;
+
+        particle.y += particle.speedY;
+
+
+        /*
+        Wrap stars around screen
+        */
+
+        if (particle.x > canvas.width) {
+          particle.x = 0;
+        }
+
+        if (particle.x < 0) {
+          particle.x = canvas.width;
+        }
+
+        if (particle.y > canvas.height) {
+          particle.y = 0;
+        }
+
+        if (particle.y < 0) {
+          particle.y = canvas.height;
+        }
+
+      }
+
+
       requestAnimationFrame(animate);
+
     }
 
     animate();
 
-    canvas.addEventListener('mousemove', (e) => {
-      for (let i = 0; i < particles.length; i++) {
-        const dx = e.clientX - particles[i].x;
-        const dy = e.clientY - particles[i].y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < 50) {
-          particles[i].speedX = dx * 0.005; // Slower response to mouse movement
-          particles[i].speedY = dy * 0.005; // Slower response to mouse movement
-        }
-      }
-    });
 
-    window.addEventListener('resize', () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    });
+    /*
+    --------------------------------------------------
+    STAR / MOUSE INTERACTION
+    --------------------------------------------------
+
+    This function receives mouse coordinates.
+
+    It does not matter whether the mouse event came
+    from the canvas or from the parent webpage.
+    --------------------------------------------------
+    */
+
+    function interactWithPointer(mouseX, mouseY) {
+
+      for (let i = 0; i < particles.length; i++) {
+
+        const particle = particles[i];
+
+        const dx = mouseX - particle.x;
+
+        const dy = mouseY - particle.y;
+
+        const distance = Math.sqrt(
+          dx * dx + dy * dy
+        );
+
+
+        /*
+        Only affect nearby stars
+        */
+
+        if (distance < 50) {
+
+          particle.speedX = dx * 0.005;
+
+          particle.speedY = dy * 0.005;
+
+        }
+
+      }
+
+    }
+
+
+    /*
+    --------------------------------------------------
+    MOUSE INTERACTION WHEN background.html
+    IS OPENED DIRECTLY
+    --------------------------------------------------
+    */
+
+    canvas.addEventListener(
+      "pointermove",
+      function (event) {
+
+        interactWithPointer(
+          event.clientX,
+          event.clientY
+        );
+
+      },
+      {
+        passive: true
+      }
+    );
+
+
+    /*
+    --------------------------------------------------
+    IMPORTANT PART
+    --------------------------------------------------
+
+    background.html is normally loaded inside an iframe.
+
+    We make the iframe ignore pointer events.
+
+    Therefore:
+
+    - buttons remain clickable
+    - links remain clickable
+    - navbar remains clickable
+    - boxes work normally
+
+    But we listen to pointer movement on the PARENT
+    webpage instead.
+
+    Therefore stars react everywhere on the screen.
+    --------------------------------------------------
+    */
+
+    if (window.parent !== window) {
+
+      try {
+
+        /*
+        Make background iframe invisible to mouse clicks.
+
+        DO NOT disable pointer events on your content.
+        Only the background iframe ignores them.
+        */
+
+        if (window.frameElement) {
+
+          window.frameElement.style.pointerEvents = "none";
+
+        }
+
+
+        /*
+        Listen for mouse/pointer movement over
+        the entire parent webpage.
+        */
+
+        window.parent.document.addEventListener(
+          "pointermove",
+          function (event) {
+
+            interactWithPointer(
+              event.clientX,
+              event.clientY
+            );
+
+          },
+          {
+            capture: true,
+            passive: true
+          }
+        );
+
+
+      } catch (error) {
+
+        console.log(
+          "Parent page pointer tracking unavailable:",
+          error
+        );
+
+      }
+
+    }
+
+
+    /*
+    --------------------------------------------------
+    WINDOW RESIZE
+    --------------------------------------------------
+    */
+
+    window.addEventListener(
+      "resize",
+      function () {
+
+        resizeCanvas();
+
+      }
+    );
+
   </script>
+
 </body>
+
 </html>
